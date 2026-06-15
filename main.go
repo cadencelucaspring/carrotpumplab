@@ -1,6 +1,6 @@
 package main
 import ("encoding/json";"fmt")
-var builderTag = "byte-counter-990e75"
+var builderTag = "byte-counter-35cfdd"
 type Config struct{Host string `json:"host"`;Port int `json:"port"`;Debug bool `json:"debug"`;Tags []string `json:"tags"`}
 type ConfigBuilder struct{c Config}
 func NewConfigBuilder() *ConfigBuilder{return &ConfigBuilder{c:Config{Host:"localhost",Port:8080}}}

